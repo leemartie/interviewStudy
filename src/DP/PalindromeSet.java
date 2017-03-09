@@ -35,14 +35,14 @@ public class PalindromeSet {
 	public static void main(String[] args){
 		
 		PalindromeSet ps = new PalindromeSet();
-		String[] list = {"abc", "cba", "dog", "god", "potato", "burrito", "race", "car"};
+		String[] list = {"abc", "cba", "dog", "god", "potato", "burrito", "race", "car", "tat", "racef"};
 		
 		int min = -1;
 		
 		//put in a map and find the min O(n)
 		for(int i = 0; i<list.length;i++){
 			String word = list[i];
-			ps.map.put(word, 0);	
+			ps.map.put(word, i);	
 			if(min == -1 || min > word.length()){
 				min = word.length();
 			}
@@ -66,7 +66,7 @@ public class PalindromeSet {
 			while(size >= min){
 				Integer score = ps.map.get(rev);
 			
-				if(score != null){
+				if(score != null && score != i && (ps.isPalindrom(rev+wordf) || ps.isPalindrom(wordf+rev))){
 					Set<String> pair = new HashSet<String>();
 					pair.add(wordf);
 					pair.add(rev);
