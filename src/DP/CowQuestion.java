@@ -9,7 +9,8 @@ package DP;
 public class CowQuestion {
 	
 	/**
-	 * Count all possible steps taken across all paths by a cow
+	 * Count all possible steps taken across all paths by a cow ... perfrect paths up a stair case
+	 * 
 	 * @param n
 	 * @return
 	 */
