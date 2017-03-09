@@ -64,6 +64,7 @@ public class PalindromeSet {
 			int size = word.length();
 			
 			while(size >= min){
+				//is the reverse in the list
 				Integer score = ps.map.get(rev);
 			
 				if(score != null && score != i && (ps.isPalindrom(rev+wordf) || ps.isPalindrom(wordf+rev))){
