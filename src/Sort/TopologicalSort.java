@@ -1,4 +1,4 @@
-package DP;
+package Sort;
 
 import java.util.Collection;
 import java.util.HashMap;

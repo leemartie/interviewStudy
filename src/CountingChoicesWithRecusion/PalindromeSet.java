@@ -1,4 +1,4 @@
-package DP;
+package CountingChoicesWithRecusion;
 
 import java.util.HashMap;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package DP;
+package CountingChoicesWithRecusion;
 
 
 public class ToCloseOrOpenThatIsTheQuestion {
