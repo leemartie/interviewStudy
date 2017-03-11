@@ -32,6 +32,33 @@ public class LinkedOperations {
 		return list;
 	}
 	
+	/**
+	 * 
+	 * @param list
+	 * @param m
+	 * @return
+	 */
+	public static LinkedNode findMthElement(LinkedNode list, int m){
+		LinkedNode p1 = list;
+		LinkedNode p2 = list;
+		int count = 0;
+		while(p1 != null){
+			if(count > m){
+				p2 = p2.next;
+			}
+			p1 = p1.next;
+			
+			count++;
+			
+		}
+		
+		//case where mth element does not exist
+		if(count < m)
+			return null;
+		
+		return p2;
+	}
+	
 	public static void main(String args[]){
 		LinkedNode head = new LinkedNode();
 		head.data = 0;
@@ -43,6 +70,9 @@ public class LinkedOperations {
 		}
 		
 		System.out.println(head);
+		
+		int m = 2;
+		System.out.println(m+"th element: "+findMthElement(head,m));
 
 
 	}
