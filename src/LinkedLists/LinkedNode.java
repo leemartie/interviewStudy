@@ -14,5 +14,23 @@ public class LinkedNode {
 		
 		return node;
 	}
+	
+	public int hashCode(){
+		return data;
+	}
+	
+	public boolean equals(Object o){
+		if(o instanceof LinkedNode){
+			LinkedNode temp = (LinkedNode)o;
+			
+			if(temp.data == this.data)
+				return true;
+			else 
+				return false;
+		}
+		else{
+			return false;
+		}
+	}
 
 }

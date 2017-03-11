@@ -35,6 +35,38 @@ public class LinkedOperations {
 	/**
 	 * 
 	 * @param list
+	 * @return
+	 */
+	public static boolean hasCycle(LinkedNode list){
+
+		
+		if(list == null)
+			return false;
+		
+		LinkedNode turtle = list;
+		LinkedNode rabbit = list;
+		
+		while(true){
+			turtle = turtle.next;
+			
+			if(turtle != null)
+				rabbit = turtle.next.next;
+			else
+				return false; //hit end
+			
+			if(rabbit == null || rabbit.next == null)
+				return false; //hit end
+			
+			if(rabbit.equals(turtle) || rabbit.next.equals(turtle)){
+				return true;
+			}
+		}
+
+	}
+	
+	/**
+	 * 
+	 * @param list
 	 * @param m
 	 * @return
 	 */
@@ -59,6 +91,10 @@ public class LinkedOperations {
 		return p2;
 	}
 	
+	/**
+	 * Testing each of the Linked List Operations
+	 * @param args
+	 */
 	public static void main(String args[]){
 		LinkedNode head = new LinkedNode();
 		head.data = 0;
@@ -73,6 +109,32 @@ public class LinkedOperations {
 		
 		int m = 2;
 		System.out.println(m+"th element: "+findMthElement(head,m));
+		
+		
+		//......test the cycle test method
+		LinkedNode headCycle = new LinkedNode();
+		head.data = 0;
+		LinkedNode node = null;
+		
+		//constructing the list
+		for(int i = 1; i<=11; i++){
+
+			
+			if(i < 11){
+				node = new LinkedNode();
+				node.data = i;
+				headCycle = insertHead(headCycle, node);
+			}else{
+				headCycle.next = node;
+			}
+		}
+		
+		boolean hasCycle = hasCycle(headCycle);
+		
+		System.out.println("has cycle: "+hasCycle);
+		
+		
+		
 
 
 	}
