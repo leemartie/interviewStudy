@@ -28,15 +28,6 @@ public class KnapSackWithMemoization {
 		}
 	}
 	
-	public static int maxWeight(int[] weights){
-		int max = -1;
-		for(int i = 0; i<weights.length;i++){
-			if(weights[i] > max){
-				max = weights[i];
-			}
-		}
-		return max;
-	}
 	
 	
 	public static void main(String args[]){
