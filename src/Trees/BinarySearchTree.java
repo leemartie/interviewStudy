@@ -99,6 +99,38 @@ public class BinarySearchTree {
 	}
 	
 	/**
+	 * get Max
+	 * @return
+	 */
+	public Node getMax(){
+		Node max = root;
+		Node temp = root;
+		while(temp != null){
+			max = temp;
+			
+			temp = temp.right;
+			
+		}
+		return max;
+	}
+	
+	/**
+	 * get Min
+	 * @return
+	 */
+	public Node getMin(){
+		Node min = root;
+		Node temp = root;
+		while(temp != null){
+			min = temp;
+			
+			temp = temp.left;
+			
+		}
+		return min;
+	}
+	
+	/**
 	 * 
 	 * @param args
 	 */
@@ -119,6 +151,12 @@ public class BinarySearchTree {
 		
 		System.out.println("---=== Post Order (print from leaves up left to right) ===---");
 		bst.printPostOrder(bst.root);
+		
+		System.out.println("---=== Get Max ===---");
+		System.out.println(bst.getMax());
+		
+		System.out.println("---=== Get Min ===---");
+		System.out.println(bst.getMin());
 	}
 
 }
