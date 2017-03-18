@@ -19,9 +19,9 @@ public class Combination {
 		for(int i = 0; i<arrayOfChars.length; i++){
 			sb = sb.append(arrayOfChars[i]);
 			
-			char[] smallerArray = new char[arrayOfChars.length-(i+1)];
+			char[] smallerArray = new char[arrayOfChars.length-(i)];
 			int count = 0;
-			for(int j = i+1;j<arrayOfChars.length;j++){				
+			for(int j = i;j<arrayOfChars.length;j++){				
 				smallerArray[count] = arrayOfChars[j];
 				count++;
 			}//j
