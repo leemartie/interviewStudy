@@ -1,4 +1,4 @@
-package CountingChoicesWithRecusion;
+package CountingChoicesWithRecursion;
 
 import java.io.*;
 import java.util.*;

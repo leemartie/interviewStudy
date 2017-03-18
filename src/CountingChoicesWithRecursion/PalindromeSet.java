@@ -1,4 +1,4 @@
-package CountingChoicesWithRecusion;
+package CountingChoicesWithRecursion;
 
 import java.util.HashMap;
 import java.util.HashSet;
