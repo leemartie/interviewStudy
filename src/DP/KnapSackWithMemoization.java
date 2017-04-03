@@ -2,6 +2,11 @@ package DP;
 
 import java.util.Arrays;
 
+/**
+ * O(nc) where is vweights and values is max;
+ * @author leemartie
+ *
+ */
 public class KnapSackWithMemoization {
 
 	public static int maxValue(int index, int capacity, int[] values, int[] weights, int[][] memo){
