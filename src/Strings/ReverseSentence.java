@@ -21,6 +21,12 @@ public class ReverseSentence {
 		s[index2] = temp;
 	}
 
+	/**
+	 * Don't do more than half else we start to switch back
+	 * @param s
+	 * @param bottom
+	 * @param top
+	 */
 	public static void swapStr(char[] s, int bottom, int top) {
 		int count = 0;
 		for (int i = bottom; i <= top; i++) {
